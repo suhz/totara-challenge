@@ -30,7 +30,7 @@ function wrap($string, $length) {
 
     // gather everything into a string, and add the new line character
     $wraped = implode("\n", array_map(function($line) {
-        return $line = implode(' ', $line);
+        return implode(' ', $line);
     }, $stringArr));
 
     // here we go, our wrapped string :)

@@ -29,7 +29,7 @@ class Wrap {
         }
 
         $this->wrapped = implode("\n", array_map(function($line) {
-            return $line = implode(' ', $line);
+            return implode(' ', $line);
         }, $stringArr));
     }
 }
