@@ -29,9 +29,9 @@ function wrap($string, $length) {
     }
 
     // gather everything into a string, and add the new line character
-    foreach ($stringArr as $lines) {
-        $wraped .= implode(' ', $lines) . "\n";
-    }
+    $wraped = implode("\n", array_map(function($line) {
+        return $line = implode(' ', $line);
+    }, $stringArr));
 
     // here we go, our wrapped string :)
     return $wraped;
